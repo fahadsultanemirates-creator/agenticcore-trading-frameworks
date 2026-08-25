@@ -1,0 +1,173 @@
+# ─────────────────────────────────────────────────────────────
+#  AgenticCore Forex PLUS — v2 Runtime Configuration
+#  Tier 2 Framework  |  Edit, then send /reload to apply live.
+# ─────────────────────────────────────────────────────────────
+
+# ── Broker Profile ──────────────────────────────────────────
+# FBS uses standard symbols (EURUSD), no suffix needed.
+# JustMarkets adds .m (EURUSD.m). Change broker.name and
+# symbol_suffix together when switching brokers.
+broker:
+  name: "FBS"           # FBS | JustMarkets | custom
+  symbol_suffix: ""     # "" for FBS/standard | ".m" for JustMarkets
+  filling_mode: auto    # auto (tries FOK→IOC→RETURN) | FOK | IOC | RETURN
+
+# ── Trading Mode ────────────────────────────────────────────
+# auto   = framework trades on its own
+# semi   = Telegram approval before each trade
+# signal = sends signals only, you trade manually
+mode: auto
+
+# ── Currency Pairs ──────────────────────────────────────────
+# Do NOT add symbol_suffix here — the framework applies it automatically.
+pairs:
+  - EURUSD
+  - GBPUSD
+  - USDJPY
+  - USDCHF
+  - AUDUSD
+  - USDCAD
+  - EURGBP
+  - EURJPY
+  - CADCHF
+  - NZDAUD
+  - XAUUSD
+  - XAGUSD
+
+# ── Risk Settings ────────────────────────────────────────────
+# Set a fixed lot size for every approved trade. Use null to return to
+# balance/risk-based sizing.
+fixed_lot_size: 0.05
+# Pair-specific fixed-lot overrides. These take priority over the default
+# fixed_lot_size above.
+fixed_lot_sizes:
+  XAUUSD: 0.01
+  XAGUSD: 0.01
+risk_per_trade_pct: 1.0          # % of balance risked per trade
+default_tp_usd: 20                # currency-pair take-profit in USD
+default_sl_usd: 15                # stop-loss in USD for every asset
+basket_take_profit_usd: 30        # close the whole active basket at combined floating profit
+# Metals use a wider target while retaining the same stop-loss.
+pair_tp_usd:
+  XAUUSD: 30
+  XAGUSD: 30
+min_signal_confidence: 65         # Tier 2 default: 65% (Tier 1 used 30%)
+
+# ── Entry Safeguards (Dubai time) ──────────────────────────────
+# Existing positions remain managed outside the entry window and after
+# a daily lock; only new entries are blocked.
+trading_guard:
+  timezone: Asia/Dubai
+  entry_start: "05:00"
+  entry_stop: "23:30"
+  normal_max_open_positions: 5
+  max_open_positions: 7
+  exceptional_min_confidence: 80  # slots 6–7 require strictly above this
+  daily_loss_limit_pct: 15
+  daily_profit_limit_pct: 5
+  realize_basket_on_session_profit_target: true
+
+# ── Scan Settings ────────────────────────────────────────────
+scan_interval_minutes: 15
+monitor_interval_seconds: 15
+timeframes:
+  - M15
+  - H1
+  - H4
+bars_to_fetch: 200
+
+# ── Multi-Timeframe Confluence (NEW in Tier 2) ───────────────
+# All three timeframes (M15, H1, H4) are analysed independently.
+# When more timeframes agree, confidence is boosted.
+mtf:
+  enabled: true
+  full_confluence_bonus: 25     # +25 when M15+H1+H4 all agree
+  partial_confluence_bonus: 10  # +10 when 2/3 timeframes agree
+
+# ── VolumeSense (completed M15 candles only) ───────────────────
+volume_sense:
+  enabled: true
+  lookback_candles: 20
+  low_ratio: 0.65
+  high_ratio: 1.25
+  gate_forex_on_low_volume: true
+  gate_metals_on_low_volume: false
+
+# ── Confidence Calibration ─────────────────────────────────────
+confidence:
+  max_score: 95
+  max_mtf_adjustment: 20
+  max_session_adjustment: 8
+  max_session_penalty: 8
+  max_memory_adjustment: 5
+  high_volume_bonus: 3
+  low_volume_penalty: 8
+  exceptional_cap_without_full_evidence: 79
+
+# ── Session Intelligence (NEW in Tier 2) ─────────────────────
+# Detects active trading sessions in UTC and adjusts confidence.
+# London-NY overlap (13:00–17:00 UTC) is the highest-quality window.
+session:
+  enabled: true
+  london:   {start: 8,  end: 17}   # 08:00–17:00 UTC
+  new_york: {start: 13, end: 22}   # 13:00–22:00 UTC
+  tokyo:    {start: 0,  end: 9}    # 00:00–09:00 UTC
+  sydney:   {start: 22, end: 7}    # 22:00–07:00 UTC (crosses midnight)
+  overlap_boost: 15      # added when London+NY overlap is active
+  dead_zone_penalty: -20 # applied when no major session is active
+
+# ── Trade Memory (NEW in Tier 2) ─────────────────────────────
+# Tracks per-pair win rates from historical trades.
+# Pairs with strong recent performance get a confidence boost;
+# pairs with poor recent performance get a penalty.
+trade_memory:
+  enabled: true
+  min_trades_for_adjustment: 5   # need ≥5 trades before adjusting
+  high_win_rate_threshold: 60    # pairs ≥60% win rate get bonus
+  low_win_rate_threshold: 35     # pairs ≤35% win rate get penalty
+  high_win_rate_bonus: 10
+  low_win_rate_penalty: -15
+  lookback_trades: 20            # only last 20 trades per pair count
+
+# ── Trailing Stop (NEW in Tier 2) ────────────────────────────
+# At 65% progress to the original TP, locks 35% of the TP distance.
+# The original TP remains unchanged.
+trailing_stop:
+  enabled: true
+  activation_at_pct: 65   # activate profit lock at 65% of TP distance
+  lock_profit_at_pct: 35  # protect 35% of TP distance on reversal
+
+# ── Dev Mode ────────────────────────────────────────────────
+# true  = uses synthetic MockBridge (no MT5 needed)
+# false = connects to real MT5 terminal on this machine
+dev_mode: false
+
+# ── MT5 Connection ───────────────────────────────────────────
+# Leave blank in dev_mode. Fill in on VPS with MT5 installed.
+mt5:
+  # MT5_LOGIN and MT5_PASSWORD must be configured as protected environment values.
+  login: ""
+  password: ""
+  server: "FBS-Demo"     # e.g. "FBS-Real" | "FBS-Demo" | "JustMarkets-Demo2"
+
+# ── Gemini AI ───────────────────────────────────────────────
+gemini:
+  model: gemini-2.0-flash
+  use_llm_for_signals: true   # false = pure TA signals only
+
+# ── Telegram ────────────────────────────────────────────────
+# 1. Use a dedicated Tier 2 bot: set FOREX_PLUS_TELEGRAM_BOT_TOKEN (never save it here)
+# 2. Send /start to that bot, then set FOREX_PLUS_ADMIN_CHAT_ID
+telegram:
+  token: ""
+  admin_chat_id: "8729027401"
+
+# ── Backtesting ─────────────────────────────────────────────
+backtest:
+  lookback_days: 30
+  initial_balance: 10000
+
+# ── Reporting ───────────────────────────────────────────────
+reporting:
+  daily_summary_time: "23:45" # Dubai local time for the complete daily summary
+  log_file: logs/trades.jsonl
