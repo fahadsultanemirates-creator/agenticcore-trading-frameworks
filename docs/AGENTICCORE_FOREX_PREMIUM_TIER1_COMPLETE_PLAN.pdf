@@ -1,0 +1,528 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R] /Count 8 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 4729 >>
+stream
+BT /F1 16.0 Tf 1 0 0 1 48 792.0 Tm (AGENTICCORE FOREX PREMIUM TIER 1) Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 770.0 Tm (FULL ARCHITECTURE, API PLAN, DEVELOPMENT ROADMAP, AND CHECKLIST) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 748.0 Tm (Prepared: 20 August 2026) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 736.0 Tm () Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 722.0 Tm (MISSION) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 700.0 Tm (Premium Tier 1 is a new-generation trading framework built from the stable Tier 2) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 688.0 Tm (foundation. It is not a direct copy or blind replacement of Tier 2. Tier 2 remains) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 676.0 Tm (the stable baseline while Premium is researched, replay-tested, demo-tested, and) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 664.0 Tm (then deployed as an isolated JustMarkets worker on the VPS.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 652.0 Tm () Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 638.0 Tm (CORE DECISIONS) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 616.0 Tm ([DECIDED] Initial broker: JustMarkets.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 604.0 Tm ([DECIDED] Primary style: intraday, multi-trade.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 592.0 Tm ([DECIDED] Gold is the core asset and receives a dedicated specialist.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 580.0 Tm ([DECIDED] Silver remains available with separate rules.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 568.0 Tm ([DECIDED] Oil is rare, event-driven, and longer-horizon only.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 556.0 Tm ([DECIDED] The engine may manage entries and exits autonomously inside deterministic) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 544.0 Tm (risk limits.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 532.0 Tm ([DECIDED] Up to three trades on one pair may exist in one cycle only with independent) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 520.0 Tm (confirmation.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 508.0 Tm ([DECIDED] Daily/session controls use the live MT5 balance/equity baseline rather than) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 496.0 Tm (a fixed account amount.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 484.0 Tm ([DECIDED] Target is approximately 30% better accuracy and trade management, but this) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 472.0 Tm (must be measured rather than promised.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 460.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 446.0 Tm (1. FIRST-RELEASE API SURFACE) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 430.0 Tm (The first production design does not need dozens of APIs.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 418.0 Tm () Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 404.0 Tm (LOCAL TRADING INTERFACE - 1) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 382.0 Tm (1. MetaTrader 5 Python API) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 366.0 Tm (  Purpose: execution, broker ticks, candles, account, positions, orders, history,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 354.0 Tm (  SL/TP changes, and broker-confirmed exits.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 342.0 Tm (  Cost: local/library interface; the MT5 terminal and broker account are separate.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 330.0 Tm (  Required controls: explicit terminal path, account/server identity, symbol and) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 318.0 Tm (  contract validation, broker suffix mapping, filling mode, and fail-closed behavior.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 306.0 Tm () Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 292.0 Tm (OUTSIDE SERVICE INTERFACES - 5) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 270.0 Tm (1. Telegram Bot API) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 254.0 Tm (  Purpose: commands, alerts, reports, emergency controls, and operator copilot.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 242.0 Tm (  Cost: normally free.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 230.0 Tm (  Required controls: one bot per worker, chat authorization, polling conflict) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 218.0 Tm (  protection, confirmation for high-impact changes, and no credential exposure.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 206.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 192.0 Tm (2. Primary LLM provider - OpenAI initially) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 176.0 Tm (  Purpose: news/geopolitical interpretation, trade review, loss analysis, research,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 164.0 Tm (  explanations, and Telegram copilot.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 152.0 Tm (  Cost: usage-based paid service.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 140.0 Tm (  Required controls: allow-listed tools, token/cost limits, timeouts, structured JSON,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 128.0 Tm (  no direct order authority, and deterministic risk boundary.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 116.0 Tm (  Optional: Gemini can be used as fallback or evaluation model, but is not required) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 104.0 Tm (  for the first Premium architecture.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 92.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 78.0 Tm (3. Economic-calendar provider) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 4978 >>
+stream
+BT /F1 8.6 Tf 1 0 0 1 48 792.0 Tm (  Purpose: forecast, previous, actual, impact, event time, surprise, affected) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 780.0 Tm (  currencies/assets, blackout windows, and post-event stabilization.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 768.0 Tm (  Candidates: Trading Economics or equivalent licensed provider.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 756.0 Tm (  Cost: likely paid for reliable production access.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 744.0 Tm (  Required controls: timezone normalization, timestamps, rate limits, historical) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 732.0 Tm (  access, caching, stale-data status, and event-source quality.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 720.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 706.0 Tm (4. Financial-news/geopolitical provider) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 690.0 Tm (  Purpose: market headlines, commodity news, central-bank news, geopolitical events,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 678.0 Tm (  source metadata, affected entities, and event severity.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 666.0 Tm (  Candidates: licensed financial/news feed plus optional GDELT-style discovery.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 654.0 Tm (  Cost: reliable licensed finance feeds are usually paid; broad discovery may be free.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 642.0 Tm (  Required controls: source timestamp, deduplication, corroboration, confidence) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 630.0 Tm (  decay, severity, licensing, and no unsupported redistribution.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 618.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 604.0 Tm (5. Secondary market-data provider) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 588.0 Tm (  Purpose: DXY, yields, gold, silver, oil, volatility, currency strength, anomaly) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 576.0 Tm (  comparison, and cross-asset context.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 564.0 Tm (  Candidates: Twelve Data, Polygon, or equivalent after coverage testing.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 552.0 Tm (  Cost: likely paid for real-time entitlement.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 540.0 Tm (  Required controls: symbol mapping, latency checks, entitlement verification,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 528.0 Tm (  caching, rate limits, and MT5 as execution-price truth.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 516.0 Tm () Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 502.0 Tm (OPTIONAL ADDITIONS) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 480.0 Tm (- GDELT-style geopolitical discovery.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 468.0 Tm (- FRED-style macro history.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 456.0 Tm (- Gemini fallback/evaluation.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 444.0 Tm (- A second secondary-data provider for comparison.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 432.0 Tm (- PostgreSQL for production persistence; local files only for prototypes.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 420.0 Tm () Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 406.0 Tm (EXPECTED COST SPLIT) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 384.0 Tm (Free/local: MT5 Python interface, Telegram Bot API, and possibly public geopolitical) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 372.0 Tm (or macro sources.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 360.0 Tm (Likely paid/usage-based: OpenAI, a production calendar, a reliable financial-news) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 348.0 Tm (feed, and reliable real-time secondary market data.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 336.0 Tm (We should compare coverage, latency, licensing, historical access, and cost before) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 324.0 Tm (buying multiple providers.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 312.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 298.0 Tm (2. VPS-FIRST DEVELOPMENT MODEL) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 282.0 Tm (Premium should run on the VPS from the beginning, but source code should remain) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 270.0 Tm (maintained in the project repository.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 258.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 244.0 Tm (Development sequence:) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 232.0 Tm (  1. Build the isolated Premium structure in the repository.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 216.0 Tm (  2. Deploy the same code to a dedicated VPS folder.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 200.0 Tm (  3. Run it in replay or paper mode on the VPS.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 184.0 Tm (  4. Add connection-only MT5 tests.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 168.0 Tm (  5. Add real APIs one at a time.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 152.0 Tm (  6. Enable demo trading only after risk-boundary tests pass.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 136.0 Tm (  7. Enable live execution only after replay, out-of-sample, and demo validation.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 120.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 106.0 Tm (Suggested separation:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 94.0 Tm (  C:\\forex-bot\\artifacts\\agenticcore-forex\\v2       stable FBS Tier 2) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 82.0 Tm (  C:\\forex-bot\\artifacts\\agenticcore-forex\\premium  isolated JustMarkets Premium) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 70.0 Tm () Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 4483 >>
+stream
+BT /F1 8.6 Tf 1 0 0 1 48 792.0 Tm (Premium needs a separate MT5 terminal/data directory, account identity check,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 780.0 Tm (Telegram bot, magic number, state namespace, logs, and process.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 768.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 754.0 Tm (3. PREMIUM PROJECT STRUCTURE) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 738.0 Tm (premium/) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 726.0 Tm (  main.py) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 714.0 Tm (  config/) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 702.0 Tm (  domain/) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 690.0 Tm (    trades, signals, regimes, events, memory, risk models) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 678.0 Tm (  adapters/) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 666.0 Tm (    mt5/) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 654.0 Tm (    data/) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 642.0 Tm (      calendar, news, cross_asset, macro) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 630.0 Tm (  agents/) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 618.0 Tm (    gold, silver, oil, regime, reversal, memory, research) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 606.0 Tm (  strategy/) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 594.0 Tm (    entry, exit, scoring, portfolio policies) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 582.0 Tm (  risk/) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 570.0 Tm (    account, pair, currency, correlation, session limits) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 558.0 Tm (  storage/) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 546.0 Tm (    trades, signals, events, features, audits) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 534.0 Tm (  telegram/) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 522.0 Tm (    commands, alerts, reports, copilot) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 510.0 Tm (  research/) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 498.0 Tm (    datasets, replay, backtests, walk-forward, reports) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 486.0 Tm (  tests/) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 474.0 Tm (    unit, integration, replay, risk-boundary) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 462.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 448.0 Tm (4. OPERATING MODES) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 432.0 Tm (REPLAY: historical data only; no broker connection and no external order.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 420.0 Tm (PAPER: current market data with simulated fills.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 408.0 Tm (SIGNAL: real analysis but only signals and explanations.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 396.0 Tm (DEMO: isolated JustMarkets demo MT5 account.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 384.0 Tm (LIVE: real execution, disabled by default and gated by explicit checks.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 372.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 358.0 Tm (Every mode must record the same decision objects so replay, paper, demo, and live) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 346.0 Tm (results can be compared.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 334.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 320.0 Tm (5. DETERMINISTIC SAFETY LAYER) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 304.0 Tm (This layer must be built before AI or complex strategy logic.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 292.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 278.0 Tm (Required controls:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 266.0 Tm ([ ] Explicit MT5 terminal path.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 254.0 Tm ([ ] Verify broker, server, account number, account mode, currency, and leverage.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 242.0 Tm ([ ] Unique magic number and state namespace.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 230.0 Tm ([ ] Broker symbol suffix, contract size, tick size, tick value, and filling validation.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 218.0 Tm ([ ] Maximum simultaneous positions.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 206.0 Tm ([ ] Maximum position count per symbol.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 194.0 Tm ([ ] Maximum same-pair aggregate risk.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 182.0 Tm ([ ] Maximum currency and correlated exposure.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 170.0 Tm ([ ] Maximum total open risk.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 158.0 Tm ([ ] Position-size calculation from live contract metadata.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 146.0 Tm ([ ] Maximum spread and slippage.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 134.0 Tm ([ ] Liquidity and abnormal-tick protection.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 122.0 Tm ([ ] Stale-data rejection.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 110.0 Tm ([ ] News/event blackout.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 98.0 Tm ([ ] Emergency stop.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 86.0 Tm ([ ] Heartbeat and disconnect alert.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 74.0 Tm ([ ] Idempotent order requests.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 4511 >>
+stream
+BT /F1 8.6 Tf 1 0 0 1 48 792.0 Tm ([ ] Broker-result reconciliation after every action.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 780.0 Tm ([ ] Live mode fails closed if MT5 is unavailable.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 768.0 Tm ([ ] Stops cannot be widened after entry simply to avoid a loss.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 756.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 742.0 Tm (6. SESSION AND ACCOUNT PROTECTION) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 726.0 Tm (Session:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 714.0 Tm (  - Dubai timezone: Asia/Dubai.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 702.0 Tm (  - Session starts at 05:00.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 690.0 Tm (  - New entries stop at 23:30; existing trades remain managed.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 678.0 Tm (  - Session baseline must survive restart.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 666.0 Tm (  - If baseline cannot be trusted, block new entries until the next reset.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 654.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 640.0 Tm (Limits:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 628.0 Tm (  - Loss lock: -15% of the session baseline.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 616.0 Tm (  - Profit lock: +20% of the session baseline.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 604.0 Tm (  - Telegram can adjust limits only inside approved hard bounds.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 592.0 Tm (  - Open-trade protection uses live equity and floating drawdown.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 580.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 566.0 Tm (7. MARKET DATA AND PROVIDER NORMALIZATION) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 550.0 Tm (Each data adapter must provide:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 538.0 Tm (  - Provider timestamp and received timestamp.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 526.0 Tm (  - Timezone-normalized event time.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 514.0 Tm (  - Source and confidence.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 502.0 Tm (  - Freshness status.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 490.0 Tm (  - Normalized symbol/entity names.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 478.0 Tm (  - Retry and rate-limit state.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 466.0 Tm (  - Clear unavailable/error status.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 454.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 440.0 Tm (MT5 remains the execution-price truth. Outside providers add context and anomaly) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 428.0 Tm (comparison; they do not replace the broker tick used for an order.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 416.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 402.0 Tm (8. SPECIALIST MODULES) Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 386.0 Tm (GOLD SPECIALIST) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 364.0 Tm ([ ] Evaluate XAUUSD on every market cycle.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 352.0 Tm ([ ] Validate contract size, tick value, spread, hours, and volatility.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 340.0 Tm ([ ] Use gold-specific ATR, session, news, and position-size rules.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 328.0 Tm ([ ] Monitor USD, yields, central-bank news, and geopolitical risk.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 316.0 Tm ([ ] Test gold separately from currency-pair performance.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 304.0 Tm () Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 290.0 Tm (SILVER SPECIALIST) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 268.0 Tm ([ ] Use separate volatility and spread rules.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 256.0 Tm ([ ] Monitor gold/silver relationship and industrial-demand context.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 244.0 Tm ([ ] Use separate stop, target, and position-size policy.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 232.0 Tm ([ ] Validate the JustMarkets contract.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 220.0 Tm () Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 206.0 Tm (OIL EVENT MODULE) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 184.0 Tm ([ ] Disabled by default.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 172.0 Tm ([ ] Activate only for rare, high-conviction events.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 160.0 Tm ([ ] Qualify OPEC, inventory, supply, sanctions, transport, and geopolitical events.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 148.0 Tm ([ ] Require multi-source confirmation.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 136.0 Tm ([ ] Use a separate oil risk budget.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 124.0 Tm ([ ] Use longer-horizon management, not normal day-trading logic.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 112.0 Tm ([ ] Prove positive expectancy before enabling.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 100.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 86.0 Tm (9. ANALYSIS AND REGIME ENGINE) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 70.0 Tm ([ ] Multi-timeframe M15/H1/H4 analysis.) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 4416 >>
+stream
+BT /F1 8.6 Tf 1 0 0 1 48 792.0 Tm ([ ] Trend, range, volatility, and transition regime classification.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 780.0 Tm ([ ] Structure, support/resistance, breakout, and failed-breakout analysis.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 768.0 Tm ([ ] Reversal and thesis-invalidation detection.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 756.0 Tm ([ ] Liquidity sweep, divergence, volatility-spike, and spread-shock detection.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 744.0 Tm ([ ] Pair/session/regime-specific thresholds.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 732.0 Tm ([ ] Calibrated confidence based on realized outcomes.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 720.0 Tm ([ ] Meta-labeling for trade versus no-trade.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 708.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 694.0 Tm (10. ENTRY LEVELS) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 678.0 Tm (Pre-entry gate must run before confidence is evaluated:) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 666.0 Tm (  1. Market open and symbol liquid.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 650.0 Tm (  2. Dubai entry window active.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 634.0 Tm (  3. Spread/slippage acceptable.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 618.0 Tm (  4. No blocking event or unstable post-event window.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 602.0 Tm (  5. Data fresh and complete.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 586.0 Tm (  6. Risk and exposure available.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 570.0 Tm (  7. Entry location acceptable.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 554.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 540.0 Tm (Level 1 - initial setup:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 528.0 Tm (  Valid technical structure and specialist approval.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 516.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 502.0 Tm (Level 2 - confirmed add-on:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 490.0 Tm (  Independent continuation or confirmation; original thesis remains valid.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 478.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 464.0 Tm (Level 3 - exceptional third entry:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 452.0 Tm (  Independent analysis, very high confidence, remaining risk budget, and no) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 440.0 Tm (  dangerous pair/currency concentration.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 428.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 414.0 Tm (Maximum same-pair positions: three in one cycle only when independent analysis) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 402.0 Tm (justifies them. They remain one aggregate risk cluster.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 390.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 376.0 Tm (11. PROFIT LEVELS) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 360.0 Tm (Level 1 - exceptional trend:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 348.0 Tm (  Consider extending/removing TP under strict rules, use controlled trailing, and) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 336.0 Tm (  preserve a protected minimum-profit floor.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 324.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 310.0 Tm (Level 2 - solid normal trend:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 298.0 Tm (  Keep original TP and protect 35% of the original TP distance once price reaches) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 286.0 Tm (  65% progress toward the original TP.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 274.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 260.0 Tm (Level 3 - exhaustion/reversal:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 248.0 Tm (  Tighten protection or close before a full retracement when momentum, structure,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 236.0 Tm (  divergence, resistance, news, or volatility shows deterioration.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 224.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 210.0 Tm (Emergency profit handling:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 198.0 Tm (  Abnormal news or volatility can trigger immediate protection or closure.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 186.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 172.0 Tm (12. LOSS LEVELS) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 156.0 Tm (Level 1 - thesis weakening:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 144.0 Tm (  Allow a validated early small loss.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 132.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 118.0 Tm (Level 2 - confirmed invalidation:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 106.0 Tm (  Exit without waiting for the hard stop.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 94.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 80.0 Tm (Level 3 - hard-stop fallback:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 68.0 Tm (  Original hard SL remains final protection.) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 4361 >>
+stream
+BT /F1 8.6 Tf 1 0 0 1 48 792.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 778.0 Tm (Risk rule:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 766.0 Tm (  A wider structure-based SL is permitted only before entry, with reduced position) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 754.0 Tm (  size and total risk still inside the portfolio budget. Never widen an active SL) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 742.0 Tm (  merely to avoid realizing a loss.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 730.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 716.0 Tm (13. POSITION AND PORTFOLIO MANAGEMENT) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 700.0 Tm ([ ] Monitor positions more frequently than entry scans.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 688.0 Tm ([ ] Store original entry, SL, TP, risk, thesis, and approvals.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 676.0 Tm ([ ] Track MFE and MAE.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 664.0 Tm ([ ] Apply favorable-only stop changes.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 652.0 Tm ([ ] Enforce pair, currency, correlation, and total exposure limits.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 640.0 Tm ([ ] Handle partial or failed closes.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 628.0 Tm ([ ] Reconcile every broker result.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 616.0 Tm ([ ] Explain every close reason.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 604.0 Tm ([ ] Avoid unconditional basket close unless the validated portfolio policy supports it.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 592.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 578.0 Tm (14. TRADE MEMORY AND RESEARCH STORE) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 562.0 Tm (Record every candidate, including rejected signals:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 550.0 Tm (  - Full feature snapshot.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 538.0 Tm (  - Original thesis.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 526.0 Tm (  - Regime and session.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 514.0 Tm (  - Spread, volatility, news, and provider state.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 502.0 Tm (  - MFE and MAE.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 490.0 Tm (  - Entry level and confidence.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 478.0 Tm (  - Rejection reason or approval chain.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 466.0 Tm (  - Exit reason and P&L.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 454.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 440.0 Tm (Loss classifications:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 428.0 Tm (  bad signal, late entry, news shock, reversal, execution, spread, risk, or) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 416.0 Tm (  invalidation exit.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 404.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 390.0 Tm (Automatic memory may inform future scoring only after out-of-sample validation and) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 378.0 Tm (may never bypass deterministic guards.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 366.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 352.0 Tm (15. AI MODULES) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 336.0 Tm (Only 3-5 modules need genuine LLM reasoning:) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 324.0 Tm (  1. News/geopolitical interpretation.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 308.0 Tm (  2. Trade-review and loss-analysis.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 292.0 Tm (  3. Telegram OpenAI copilot.) Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 276.0 Tm (  4. Optional research/calibration assistant.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 260.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 246.0 Tm (The LLM is not called on every tick. It cannot:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 234.0 Tm (  - bypass risk limits,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 222.0 Tm (  - change lot size without confirmation,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 210.0 Tm (  - change account/broker,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 198.0 Tm (  - remove a stop,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 186.0 Tm (  - disable a lock,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 174.0 Tm (  - submit unapproved live orders,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 162.0 Tm (  - expose credentials.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 150.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 136.0 Tm (16. TELEGRAM COPILOT AND OPERATIONS) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 120.0 Tm (Required commands/features:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 108.0 Tm ([ ] status and health.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 96.0 Tm ([ ] account, positions, exposure, and session baseline.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 84.0 Tm ([ ] reports and performance by pair/session/regime.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 72.0 Tm ([ ] signal explanations and rejected-signal reasons.) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 4834 >>
+stream
+BT /F1 8.6 Tf 1 0 0 1 48 792.0 Tm ([ ] trade close and loss analysis.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 780.0 Tm ([ ] stop, resume, and emergency close.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 768.0 Tm ([ ] data/provider status.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 756.0 Tm ([ ] MT5 connection heartbeat.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 744.0 Tm ([ ] configuration changes with bounds and confirmation.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 732.0 Tm ([ ] OpenAI copilot with allow-listed read/report/research tools.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 720.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 706.0 Tm (17. VALIDATION PLAN) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 690.0 Tm (Phase A - unit and boundary tests:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 678.0 Tm (  Risk, position capacity, session time, locks, contract sizing, SL/TP, and exposure.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 666.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 652.0 Tm (Phase B - historical replay:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 640.0 Tm (  Same strategy code, simulated broker, spread/commission/slippage, realistic fills.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 628.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 614.0 Tm (Phase C - walk-forward:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 602.0 Tm (  Train/calibrate on one period, validate on the next, then roll forward.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 590.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 576.0 Tm (Phase D - out-of-sample:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 564.0 Tm (  Hold back unseen data and do not tune against it.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 552.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 538.0 Tm (Phase E - stress tests:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 526.0 Tm (  Spread widening, data gaps, news shocks, slippage, disconnects, restart, and) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 514.0 Tm (  reordered trade outcomes.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 502.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 488.0 Tm (Phase F - signal-only and paper:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 476.0 Tm (  Live data, no orders, full decision logging.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 464.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 450.0 Tm (Phase G - isolated demo:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 438.0 Tm (  One JustMarkets demo worker on the VPS.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 426.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 412.0 Tm (Performance metrics:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 400.0 Tm (  win rate, expectancy, profit factor, maximum drawdown, average win/loss,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 388.0 Tm (  profit retention, early-exit quality, trade frequency, exposure concentration,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 376.0 Tm (  performance by asset, entry level, session, and regime.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 364.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 350.0 Tm (The 30% improvement target is accepted only if it is repeatable out-of-sample) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 338.0 Tm (against the frozen Tier 2 baseline under comparable costs and execution assumptions.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 326.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 312.0 Tm (18. COMPLETE BUILD ORDER) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 296.0 Tm ([ ] Freeze Tier 2 and export baseline history/configuration.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 284.0 Tm ([ ] Create Premium package/worktree.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 272.0 Tm ([ ] Build replay/paper/demo/live modes.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 260.0 Tm ([ ] Build logs, health monitor, heartbeat, and emergency stop.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 248.0 Tm ([ ] Build explicit MT5 terminal/account adapter.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 236.0 Tm ([ ] Add simulated broker.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 224.0 Tm ([ ] Implement deterministic account, session, exposure, and execution guards.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 212.0 Tm ([ ] Deploy safe runtime to VPS.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 200.0 Tm ([ ] Run connection-only JustMarkets checks.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 188.0 Tm ([ ] Build provider interfaces and mock responses.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 176.0 Tm ([ ] Compare calendar providers.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 164.0 Tm ([ ] Compare finance/news providers.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 152.0 Tm ([ ] Compare secondary market-data providers.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 140.0 Tm ([ ] Add caching, retries, timestamps, rate limits, and stale-data checks.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 128.0 Tm ([ ] Implement Gold specialist.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 116.0 Tm ([ ] Implement Silver specialist.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 104.0 Tm ([ ] Keep Oil disabled and build event qualification.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 92.0 Tm ([ ] Implement regime, structure, reversal, and confluence engine.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 80.0 Tm ([ ] Implement calibrated confidence and meta-labeling.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 68.0 Tm ([ ] Implement entry levels and controlled same-pair scaling.) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 2657 >>
+stream
+BT /F1 8.6 Tf 1 0 0 1 48 792.0 Tm ([ ] Implement profit and loss levels.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 780.0 Tm ([ ] Implement structured trade memory and audit store.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 768.0 Tm ([ ] Add OpenAI news interpretation.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 756.0 Tm ([ ] Add trade review/loss analysis.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 744.0 Tm ([ ] Add Telegram copilot with allow-listed tools.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 732.0 Tm ([ ] Run replay, backtest, walk-forward, out-of-sample, and stress tests.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 720.0 Tm ([ ] Run signal-only and paper mode on the VPS.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 708.0 Tm ([ ] Run isolated JustMarkets demo worker.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 696.0 Tm ([ ] Compare with frozen Tier 2.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 684.0 Tm ([ ] Deploy live only after explicit approval and final safety review.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 672.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 658.0 Tm (19. PREMIUM VS TIER 2) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 642.0 Tm (Tier 2 is the stable operational framework with M15/H1/H4 technical confluence,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 630.0 Tm (session modifiers, lightweight event blocking, pair memory, fixed/risk-based sizing,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 618.0 Tm (seven-position capacity, Telegram commands, MT5 execution, profit locking, basket) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 606.0 Tm (protection, and reporting.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 594.0 Tm () Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 580.0 Tm (Premium adds:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 568.0 Tm (  - research-grade replaceable data adapters,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 556.0 Tm (  - explicit terminal/account isolation,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 544.0 Tm (  - live contract-aware sizing,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 532.0 Tm (  - pair/currency/correlation portfolio exposure,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 520.0 Tm (  - gold and silver specialists,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 508.0 Tm (  - event-only oil module,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 496.0 Tm (  - regime and reversal intelligence,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 484.0 Tm (  - calibrated confidence and meta-labeling,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 472.0 Tm (  - structured candidate and rejection memory,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 460.0 Tm (  - multi-level entry/profit/loss management,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 448.0 Tm (  - out-of-sample validation,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 436.0 Tm (  - AI interpretation and copilot behind strict tool boundaries,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 424.0 Tm (  - VPS-first isolated workers for future accounts and clients.) Tj ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 18 0 R >>
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000168 00000 n 
+0000000238 00000 n 
+0000005019 00000 n 
+0000005145 00000 n 
+0000010175 00000 n 
+0000010301 00000 n 
+0000014836 00000 n 
+0000014962 00000 n 
+0000019526 00000 n 
+0000019654 00000 n 
+0000024123 00000 n 
+0000024251 00000 n 
+0000028665 00000 n 
+0000028793 00000 n 
+0000033680 00000 n 
+0000033808 00000 n 
+0000036518 00000 n 
+trailer
+<< /Size 20 /Root 1 0 R >>
+startxref
+36646
+%%EOF
