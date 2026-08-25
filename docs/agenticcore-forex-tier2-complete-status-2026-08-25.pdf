@@ -1,0 +1,293 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 1465 >>
+stream
+BT /F2 20 Tf 48 786 Td (AgenticCore Forex Plus Tier 2) Tj ET
+BT /F1 9.5 Tf 48 762 Td (Stable intraday framework - complete capabilities, current status, and remaining work) Tj ET
+0.10 0.28 0.45 RG 1 w 48 737 m 547 737 l S
+BT /F2 13 Tf 48 741 Td (Executive status) Tj ET
+BT /F1 9.5 Tf 48 723 Td (This report is a current-state project record prepared from the Replit source tree, existing specifications, test results, and the latest VPS observations available in this workspace.) Tj ET
+BT /F1 9.5 Tf 48 710 Td (It separates features that are implemented in code from features that are planned, partially validated, or still require a controlled VPS/demo step.) Tj ET
+0.91 0.95 0.98 rg 50 678 495 16 re f
+0 0 0 rg
+BT /F2 9.5 Tf 58 689 Td (Prepared: 25 August 2026 \(Asia/Dubai\)) Tj ET
+0.91 0.95 0.98 rg 50 665 495 16 re f
+0 0 0 rg
+BT /F2 9.5 Tf 58 676 Td (Source of truth for code: Replit workspace) Tj ET
+0.91 0.95 0.98 rg 50 652 495 16 re f
+0 0 0 rg
+BT /F2 9.5 Tf 58 663 Td (VPS status: only what was visible from the submitted Windows terminal output is treated as verified) Tj ET
+0.98 0.95 0.86 rg 50 631 495 16 re f
+0 0 0 rg
+BT /F2 9.3 Tf 58 642 Td (Important: this is a software and deployment status report, not a promise of trading profits. Live execution remains subject to market conditions, broker/exchange behavior, and explicit operator checks.) Tj ET
+0.65 0.65 0.65 RG 48 52 m 547 52 l S
+BT /F1 8 Tf 48 36 Td (AgenticCore project report  |  1/4) Tj ET
+endstream
+endobj
+4 0 obj
+<< /Length 5691 >>
+stream
+BT /F2 20 Tf 48 778 Td (AgenticCore Forex Plus - Tier 2) Tj ET
+0.10 0.28 0.45 RG 1 w 48 750 m 547 750 l S
+BT /F2 13 Tf 48 754 Td (1. Project purpose and boundary) Tj ET
+0.91 0.95 0.98 rg 50 725 495 16 re f
+0 0 0 rg
+BT /F2 9.5 Tf 58 736 Td (CURRENT POSITION - Tier 2 is the stable, practical intraday Forex framework. It is) Tj ET
+BT /F1 9.5 Tf 58 723 Td (separate from the future Premium Tier 1 research system and should be frozen after) Tj ET
+BT /F1 9.5 Tf 58 711 Td (operational safety validation.) Tj ET
+BT /F1 9.5 Tf 48 699 Td (The reviewed configuration is built around MT5 and supports FBS as the current baseline,) Tj ET
+BT /F1 9.5 Tf 48 686 Td (with broker suffix support for JustMarkets. It has auto, semi, and signal modes. The Replit) Tj ET
+BT /F1 9.5 Tf 48 673 Td (runtime is protected from accidental live trading; the intended live runtime is a laptop or) Tj ET
+BT /F1 9.5 Tf 48 660 Td (Windows VPS.) Tj ET
+BT /F1 9.5 Tf 48 647 Td (The strategy uses M15 as the primary scan with H1/H4 confluence, session intelligence,) Tj ET
+BT /F1 9.5 Tf 48 634 Td (deterministic risk controls, Telegram operations, trade memory, and broker-confirmed close) Tj ET
+BT /F1 9.5 Tf 48 621 Td (accounting.) Tj ET
+0.10 0.28 0.45 RG 1 w 48 596 m 547 596 l S
+BT /F2 13 Tf 48 600 Td (2. Features and capabilities built) Tj ET
+BT /F2 11 Tf 48 582 Td (Operating model and broker support) Tj ET
+0.10 0.28 0.45 rg 51 568 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 567 Td (Manager process scans on a 15-minute interval.) Tj ET
+0.10 0.28 0.45 rg 51 555 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 554 Td (Independent portfolio monitor refreshes positions and account state approximately) Tj ET
+BT /F1 9.5 Tf 76 541 Td (every 15 seconds.) Tj ET
+0.10 0.28 0.45 rg 51 530 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 529 Td (Optional dedicated Telegram polling task uses a separate Tier 2 bot token.) Tj ET
+0.10 0.28 0.45 rg 51 517 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 516 Td (Auto mode can execute approved entries; semi mode waits for approval; signal mode) Tj ET
+BT /F1 9.5 Tf 76 503 Td (reports without execution.) Tj ET
+0.10 0.28 0.45 rg 51 492 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 491 Td (Replit guard prevents accidental live operation inside the editing environment.) Tj ET
+0.10 0.28 0.45 rg 51 479 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 478 Td (MT5 bridge supports broker symbols, suffix mapping, filling modes,) Tj ET
+BT /F1 9.5 Tf 76 465 Td (account/position/history access, and mock bridge testing.) Tj ET
+0.10 0.28 0.45 rg 51 454 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 453 Td (Configured coverage includes EURUSD, GBPUSD, USDJPY, USDCHF, AUDUSD, USDCAD, EURGBP,) Tj ET
+BT /F1 9.5 Tf 76 440 Td (CADCHF, NZDAUD, XAUUSD, and XAGUSD.) Tj ET
+BT /F2 11 Tf 48 420 Td (Market analysis) Tj ET
+0.10 0.28 0.45 rg 51 406 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 405 Td (Retrieves broker candles for M15, H1, and H4.) Tj ET
+0.10 0.28 0.45 rg 51 393 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 392 Td (Calculates RSI, MACD, EMA20/50/200, Bollinger Bands, ATR, support/resistance, and) Tj ET
+BT /F1 9.5 Tf 76 379 Td (trend state.) Tj ET
+0.10 0.28 0.45 rg 51 368 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 367 Td (Uses completed candles for signal decisions.) Tj ET
+0.10 0.28 0.45 rg 51 355 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 354 Td (Applies multi-timeframe confluence and bounded confidence scoring.) Tj ET
+0.10 0.28 0.45 rg 51 342 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 341 Td (Includes session intelligence for Sydney, Tokyo, London, New York, overlaps, and) Tj ET
+BT /F1 9.5 Tf 76 328 Td (dead-zone avoidance.) Tj ET
+0.10 0.28 0.45 rg 51 317 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 316 Td (Includes event/news sentiment as advisory signal context, with Gemini commentary kept) Tj ET
+BT /F1 9.5 Tf 76 303 Td (advisory rather than authoritative.) Tj ET
+0.10 0.28 0.45 rg 51 292 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 291 Td (Adds completed-candle tick-volume classification and low-volume gates.) Tj ET
+0.10 0.28 0.45 rg 51 279 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 278 Td (Treats Gold and Silver with asset-aware volume behavior so metals are not incorrectly) Tj ET
+BT /F1 9.5 Tf 76 265 Td (rejected by forex volume assumptions.) Tj ET
+0.10 0.28 0.45 rg 51 254 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 253 Td (Applies confidence calibration adjustments within bounded limits and caps exceptional) Tj ET
+BT /F1 9.5 Tf 76 240 Td (confidence.) Tj ET
+BT /F2 11 Tf 48 220 Td (Risk and trading guards) Tj ET
+0.10 0.28 0.45 rg 51 206 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 205 Td (Deterministic entry and risk checks run before execution.) Tj ET
+0.10 0.28 0.45 rg 51 193 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 192 Td (Dubai session guard uses a durable 05:00 baseline and fail-closed behavior when the) Tj ET
+BT /F1 9.5 Tf 76 179 Td (baseline cannot be trusted.) Tj ET
+0.10 0.28 0.45 rg 51 168 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 167 Td (New entries stop at the configured session boundary while existing positions remain) Tj ET
+BT /F1 9.5 Tf 76 154 Td (managed.) Tj ET
+0.10 0.28 0.45 rg 51 143 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 142 Td (Session profit target is configurable and currently set to 5% in the reviewed) Tj ET
+BT /F1 9.5 Tf 76 129 Td (configuration.) Tj ET
+0.10 0.28 0.45 rg 51 118 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 117 Td (Daily/session locks, position capacity, confidence thresholds, exposure checks, and) Tj ET
+BT /F1 9.5 Tf 76 104 Td (broker constraints are enforced.) Tj ET
+0.10 0.28 0.45 rg 51 93 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 92 Td (Profit-lock policy preserves the original TP and protects 35% of its distance once) Tj ET
+BT /F1 9.5 Tf 76 79 Td (price reaches 65% progress.) Tj ET
+0.65 0.65 0.65 RG 48 52 m 547 52 l S
+BT /F1 8 Tf 48 36 Td (AgenticCore project report  |  2/4) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Length 5758 >>
+stream
+BT /F1 9.5 Tf 76 786 Td (are supported.) Tj ET
+0.10 0.28 0.45 rg 51 775 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 774 Td (A dedicated token prevents conflict with the older Tier 1 bot.) Tj ET
+BT /F2 11 Tf 48 753 Td (Testing and completed safety updates) Tj ET
+0.10 0.28 0.45 rg 51 739 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 738 Td (Completed-candle volume classification, low-volume gates, Gold/Silver handling,) Tj ET
+BT /F1 9.5 Tf 76 725 Td (bounded confidence, advisory AI, durable Telegram outbox, close-ledger lifecycle,) Tj ET
+BT /F1 9.5 Tf 76 713 Td (broker-confirmed accounting, partial-exit aggregation, session target behavior, MT5) Tj ET
+BT /F1 9.5 Tf 76 701 Td (identity checks, and protected settings were implemented.) Tj ET
+0.10 0.28 0.45 rg 51 690 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 689 Td (Replit validation: 24 Tier 2 tests passed.) Tj ET
+0.10 0.28 0.45 rg 51 677 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 676 Td (Compilation validation passed.) Tj ET
+0.10 0.28 0.45 rg 51 664 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 663 Td (The source tree is saved in artifacts/agenticcore-forex/v2.) Tj ET
+0.10 0.28 0.45 RG 1 w 48 638 m 547 638 l S
+BT /F2 13 Tf 48 642 Td (3. Current status) Tj ET
+0.91 0.95 0.98 rg 50 613 495 16 re f
+0 0 0 rg
+BT /F2 9.5 Tf 58 624 Td (CURRENT POSITION - The code and reviewed safety changes are complete enough for) Tj ET
+BT /F1 9.5 Tf 58 611 Td (controlled signal-only validation. The Replit worker is intentionally not the live) Tj ET
+BT /F1 9.5 Tf 58 599 Td (Forex runtime and exits under the Replit guard. The Windows laptop/VPS copy must be) Tj ET
+BT /F1 9.5 Tf 58 587 Td (validated separately.) Tj ET
+BT /F1 9.5 Tf 48 575 Td (The reviewed config currently has mode auto and dev_mode false, so launching that exact) Tj ET
+BT /F1 9.5 Tf 48 562 Td (configuration on a real MT5 machine would be live operation. It should not be used as the) Tj ET
+BT /F1 9.5 Tf 48 549 Td (first validation step.) Tj ET
+BT /F1 9.5 Tf 48 536 Td (No claim is made here that the current Windows deployment has every latest file until its) Tj ET
+BT /F1 9.5 Tf 48 523 Td (manifest and hashes are checked against Replit.) Tj ET
+0.10 0.28 0.45 RG 1 w 48 498 m 547 498 l S
+BT /F2 13 Tf 48 502 Td (4. What remains before Tier 2 is called fully operational) Tj ET
+BT /F2 11 Tf 48 484 Td (Required VPS/laptop validation) Tj ET
+0.10 0.28 0.45 rg 51 470 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 469 Td (Run signal-only mode for at least one complete scan cycle.) Tj ET
+0.10 0.28 0.45 rg 51 457 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 456 Td (Verify MT5 broker, server, account, terminal identity, AutoTrading state, symbols,) Tj ET
+BT /F1 9.5 Tf 76 443 Td (contract data, and filling behavior.) Tj ET
+0.10 0.28 0.45 rg 51 432 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 431 Td (Confirm no MockBridge fallback can occur after a real MT5 failure.) Tj ET
+0.10 0.28 0.45 rg 51 419 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 418 Td (Confirm protected environment variables are present and no credentials are in) Tj ET
+BT /F1 9.5 Tf 76 405 Td (configuration files.) Tj ET
+0.10 0.28 0.45 rg 51 394 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 393 Td (Confirm the durable 05:00 baseline survives restart and blocks late launches) Tj ET
+BT /F1 9.5 Tf 76 380 Td (correctly.) Tj ET
+0.10 0.28 0.45 rg 51 369 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 368 Td (Simulate and verify the configured loss/profit locks, position slots, capacity reuse,) Tj ET
+BT /F1 9.5 Tf 76 355 Td (and session boundary.) Tj ET
+0.10 0.28 0.45 rg 51 344 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 343 Td (Verify live tick-based SL/TP calculation on actual broker contracts.) Tj ET
+0.10 0.28 0.45 rg 51 331 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 330 Td (Verify BUY and SELL profit lock exactly at 65%, with original TP unchanged.) Tj ET
+0.10 0.28 0.45 rg 51 318 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 317 Td (Confirm Telegram status, session, report, memory, stop, resume, closeall, and) Tj ET
+BT /F1 9.5 Tf 76 304 Td (one-process polling behavior.) Tj ET
+0.10 0.28 0.45 rg 51 293 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 292 Td (Back up state and logs before the first operating session.) Tj ET
+BT /F2 11 Tf 48 271 Td (Remaining safety and reliability work) Tj ET
+0.10 0.28 0.45 rg 51 257 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 256 Td (Add heartbeat, MT5 disconnect, stale-data, failed-order, session-lock, and) Tj ET
+BT /F1 9.5 Tf 76 243 Td (unexpected-process-stop alerts.) Tj ET
+0.10 0.28 0.45 rg 51 232 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 231 Td (Complete broker lot-size/volume validation so the bot never submits an unexpected lot) Tj ET
+BT /F1 9.5 Tf 76 218 Td (size.) Tj ET
+0.10 0.28 0.45 rg 51 207 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 206 Td (Confirm whether the basket-close policy should remain enabled for the live account;) Tj ET
+BT /F1 9.5 Tf 76 193 Td (document the decision.) Tj ET
+0.10 0.28 0.45 rg 51 182 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 181 Td (Harden configuration changes with confirmation, bounds, audit logging, and persistent) Tj ET
+BT /F1 9.5 Tf 76 168 Td (operator visibility.) Tj ET
+0.10 0.28 0.45 rg 51 157 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 156 Td (Improve stale-data, spread, liquidity, anomaly, and cross-provider quality gates where) Tj ET
+BT /F1 9.5 Tf 76 143 Td (needed.) Tj ET
+BT /F2 11 Tf 48 123 Td (Remaining research-grade capabilities intentionally outside Tier 2) Tj ET
+0.10 0.28 0.45 rg 51 109 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 108 Td (Full feature snapshots, regime, event state, MFE/MAE, rejection reasons, and exit) Tj ET
+BT /F1 9.5 Tf 76 95 Td (classifications in trade memory.) Tj ET
+0.10 0.28 0.45 rg 51 84 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 83 Td (Calibrated probability and out-of-sample validation rather than fixed score) Tj ET
+0.65 0.65 0.65 RG 48 52 m 547 52 l S
+BT /F1 8 Tf 48 36 Td (AgenticCore project report  |  3/4) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Length 210 >>
+stream
+BT /F1 9.5 Tf 58 786 Td (that, Tier 2 should be frozen and future improvements should move to Premium.) Tj ET
+0.65 0.65 0.65 RG 48 52 m 547 52 l S
+BT /F1 8 Tf 48 36 Td (AgenticCore project report  |  4/4) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 11 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+8 0 obj
+<< /Type /Page /Parent 11 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 4 0 R >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 11 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+10 0 obj
+<< /Type /Page /Parent 11 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 6 0 R >>
+endobj
+11 0 obj
+<< /Type /Pages /Kids [7 0 R 8 0 R 9 0 R 10 0 R] /Count 4 >>
+endobj
+12 0 obj
+<< /Type /Catalog /Pages 11 0 R >>
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000001677 00000 n 
+0000007420 00000 n 
+0000013230 00000 n 
+0000013491 00000 n 
+0000013628 00000 n 
+0000013765 00000 n 
+0000013902 00000 n 
+0000014040 00000 n 
+0000014117 00000 n 
+trailer
+<< /Size 13 /Root 12 0 R >>
+startxref
+14168
+%%EOF
