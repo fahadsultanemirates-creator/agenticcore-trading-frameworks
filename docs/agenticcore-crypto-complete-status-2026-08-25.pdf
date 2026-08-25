@@ -1,0 +1,262 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 1476 >>
+stream
+BT /F2 20 Tf 48 786 Td (AgenticCore Crypto Standard Tier 1) Tj ET
+BT /F1 9.5 Tf 48 762 Td (MEXC Futures reversal framework - complete capabilities, current status, and remaining work) Tj ET
+0.10 0.28 0.45 RG 1 w 48 737 m 547 737 l S
+BT /F2 13 Tf 48 741 Td (Executive status) Tj ET
+BT /F1 9.5 Tf 48 723 Td (This report is a current-state project record prepared from the Replit source tree, existing specifications, test results, and the latest VPS observations available in this workspace.) Tj ET
+BT /F1 9.5 Tf 48 710 Td (It separates features that are implemented in code from features that are planned, partially validated, or still require a controlled VPS/demo step.) Tj ET
+0.91 0.95 0.98 rg 50 678 495 16 re f
+0 0 0 rg
+BT /F2 9.5 Tf 58 689 Td (Prepared: 25 August 2026 \(Asia/Dubai\)) Tj ET
+0.91 0.95 0.98 rg 50 665 495 16 re f
+0 0 0 rg
+BT /F2 9.5 Tf 58 676 Td (Source of truth for code: Replit workspace) Tj ET
+0.91 0.95 0.98 rg 50 652 495 16 re f
+0 0 0 rg
+BT /F2 9.5 Tf 58 663 Td (VPS status: only what was visible from the submitted Windows terminal output is treated as verified) Tj ET
+0.98 0.95 0.86 rg 50 631 495 16 re f
+0 0 0 rg
+BT /F2 9.3 Tf 58 642 Td (Important: this is a software and deployment status report, not a promise of trading profits. Live execution remains subject to market conditions, broker/exchange behavior, and explicit operator checks.) Tj ET
+0.65 0.65 0.65 RG 48 52 m 547 52 l S
+BT /F1 8 Tf 48 36 Td (AgenticCore project report  |  1/3) Tj ET
+endstream
+endobj
+4 0 obj
+<< /Length 5851 >>
+stream
+BT /F2 20 Tf 48 778 Td (AgenticCore Crypto Standard Tier 1 - MEXC Futures) Tj ET
+0.10 0.28 0.45 RG 1 w 48 750 m 547 750 l S
+BT /F2 13 Tf 48 754 Td (1. Project purpose and boundary) Tj ET
+0.91 0.95 0.98 rg 50 725 495 16 re f
+0 0 0 rg
+BT /F2 9.5 Tf 58 736 Td (CURRENT POSITION - The framework is implemented as a crypto-only, public-data-first) Tj ET
+BT /F1 9.5 Tf 58 723 Td (MEXC Futures reversal system. Normal scans are signal-only/paper-only. A separate) Tj ET
+BT /F1 9.5 Tf 58 711 Td (guarded live-cycle path exists, but it is never allowed to trade merely because a) Tj ET
+BT /F1 9.5 Tf 58 699 Td (coin appears in the scan.) Tj ET
+BT /F1 9.5 Tf 48 687 Td (This project is intentionally separate from Forex. It is designed for a dedicated laptop/VPS) Tj ET
+BT /F1 9.5 Tf 48 674 Td (runtime, with MEXC Futures as the execution venue and Dubai-time operator reporting.) Tj ET
+BT /F1 9.5 Tf 48 661 Td (The original live profile is approximately $50 notional per position, 20x isolated leverage,) Tj ET
+BT /F1 9.5 Tf 48 648 Td (about $2.50 initial margin, about $3 gross target, and a 65% progress / 35%) Tj ET
+BT /F1 9.5 Tf 48 635 Td (profit-protection rule. The live basket is bounded at up to five positions and the paper) Tj ET
+BT /F1 9.5 Tf 48 622 Td (basket target is $5 net.) Tj ET
+BT /F1 9.5 Tf 48 609 Td (The design principle is fail closed: missing data, unclear retests, invalid contract math,) Tj ET
+BT /F1 9.5 Tf 48 596 Td (missing protection, uncertain exchange state, and correlation risk produce no trade.) Tj ET
+0.10 0.28 0.45 RG 1 w 48 571 m 547 571 l S
+BT /F2 13 Tf 48 575 Td (2. Features and capabilities built) Tj ET
+BT /F2 11 Tf 48 557 Td (Market-data adapters) Tj ET
+0.10 0.28 0.45 rg 51 543 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 542 Td (Public MEXC Futures adapter for contract details, tickers, OHLCV, funding, open) Tj ET
+BT /F1 9.5 Tf 76 529 Td (interest, order-book depth, and recent public trades.) Tj ET
+0.10 0.28 0.45 rg 51 518 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 517 Td (Completed 15-minute, 1-hour, and 4-hour candle processing. Forming candles are) Tj ET
+BT /F1 9.5 Tf 76 504 Td (excluded from entry decisions.) Tj ET
+0.10 0.28 0.45 rg 51 493 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 492 Td (Public Binance Futures and Bybit context for independent flow, depth, funding, and) Tj ET
+BT /F1 9.5 Tf 76 479 Td (open-interest comparison.) Tj ET
+0.10 0.28 0.45 rg 51 468 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 467 Td (CoinGecko market-cap/supply context and optional CoinMarketCap metadata.) Tj ET
+0.10 0.28 0.45 rg 51 455 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 454 Td (Dependency-injected transport so tests do not call the real exchange.) Tj ET
+BT /F2 11 Tf 48 433 Td (Universe selection and signal quality) Tj ET
+0.10 0.28 0.45 rg 51 419 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 418 Td (Scans the USDT perpetual universe and filters for contract activity, liquidity,) Tj ET
+BT /F1 9.5 Tf 76 405 Td (turnover, spread, and usable market data.) Tj ET
+0.10 0.28 0.45 rg 51 394 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 393 Td (Builds support/resistance structure zones from completed candles.) Tj ET
+0.10 0.28 0.45 rg 51 381 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 380 Td (Requires multi-touch zones instead of treating a single price reaction as a trade) Tj ET
+BT /F1 9.5 Tf 76 367 Td (location.) Tj ET
+0.10 0.28 0.45 rg 51 356 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 355 Td (Detects directional retests/reclaims, false breakouts, failed breakouts, invalid) Tj ET
+BT /F1 9.5 Tf 76 342 Td (closes, and stale/pending setups.) Tj ET
+0.10 0.28 0.45 rg 51 331 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 330 Td (Uses relative volume, funding, turnover/open interest, spread, public trades, and) Tj ET
+BT /F1 9.5 Tf 76 317 Td (order-book microstructure as quality evidence.) Tj ET
+0.10 0.28 0.45 rg 51 306 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 305 Td (Candidates can remain pending, expire, or be rejected instead of becoming stale trade) Tj ET
+BT /F1 9.5 Tf 76 292 Td (plans.) Tj ET
+0.10 0.28 0.45 rg 51 281 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 280 Td (Scores candidates on a bounded 0-100 scale; cross-market agreement can adjust) Tj ET
+BT /F1 9.5 Tf 76 267 Td (confidence only within a small cap and cannot create a direction or execution plan.) Tj ET
+BT /F2 11 Tf 48 247 Td (Risk, sizing, and protection) Tj ET
+0.10 0.28 0.45 rg 51 233 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 232 Td (Uses completed-candle ATR for bounded, coin-specific stop placement.) Tj ET
+0.10 0.28 0.45 rg 51 220 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 219 Td (Calculates contract quantity and estimated isolated margin rather than guessing from a) Tj ET
+BT /F1 9.5 Tf 76 206 Td (dollar amount.) Tj ET
+0.10 0.28 0.45 rg 51 195 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 194 Td (Targets the fixed live profile and rejects invalid quantity, margin, contract, or) Tj ET
+BT /F1 9.5 Tf 76 181 Td (price math.) Tj ET
+0.10 0.28 0.45 rg 51 170 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 169 Td (Requires a planned side, quantity, stop, target, and profit-lock levels before a live) Tj ET
+BT /F1 9.5 Tf 76 156 Td (plan can exist.) Tj ET
+0.10 0.28 0.45 rg 51 145 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 144 Td (Uses a 65% progress trigger and protects 35% of the original target distance without) Tj ET
+BT /F1 9.5 Tf 76 131 Td (widening a stop.) Tj ET
+0.10 0.28 0.45 rg 51 120 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 119 Td (Enforces isolated-margin behavior and rejects cross-margin assumptions.) Tj ET
+0.10 0.28 0.45 rg 51 107 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 106 Td (Limits same-direction correlated paper exposure and applies basket risk controls.) Tj ET
+0.10 0.28 0.45 rg 51 94 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 93 Td (Requires marks for all open positions before activating a net-profit basket-close) Tj ET
+BT /F1 9.5 Tf 76 80 Td (action.) Tj ET
+0.65 0.65 0.65 RG 48 52 m 547 52 l S
+BT /F1 8 Tf 48 36 Td (AgenticCore project report  |  2/3) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Length 6122 >>
+stream
+0.10 0.28 0.45 rg 51 787 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 786 Td (No withdrawal capability, leverage mutation, or cross-margin mutation is provided.) Tj ET
+0.10 0.28 0.45 rg 51 774 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 773 Td (A separate live preflight checks the dedicated trading key and requires a clean) Tj ET
+BT /F1 9.5 Tf 76 760 Td (account.) Tj ET
+0.10 0.28 0.45 rg 51 749 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 748 Td (The guarded live canary/cycle supports explicit confirmation, a five-position bound,) Tj ET
+BT /F1 9.5 Tf 76 735 Td (protection verification, emergency close handling, reconciliation, cycle locking, and) Tj ET
+BT /F1 9.5 Tf 76 723 Td (profit-lock monitoring.) Tj ET
+0.10 0.28 0.45 rg 51 712 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 711 Td (Live entry must include protection and then verify that exchange-side TP/SL protection) Tj ET
+BT /F1 9.5 Tf 76 698 Td (is active; failure triggers safe handling rather than silent continuation.) Tj ET
+0.10 0.28 0.45 RG 1 w 48 674 m 547 674 l S
+BT /F2 13 Tf 48 678 Td (3. Safety behavior demonstrated) Tj ET
+0.91 0.95 0.98 rg 50 649 495 16 re f
+0 0 0 rg
+BT /F2 9.5 Tf 58 660 Td (CURRENT POSITION - The VPS live preflight has passed according to the submitted) Tj ET
+BT /F1 9.5 Tf 58 647 Td (terminal output. The account was previously observed clean: zero positions, zero) Tj ET
+BT /F1 9.5 Tf 58 635 Td (ordinary orders, and zero TP/SL plans.) Tj ET
+BT /F1 9.5 Tf 48 623 Td (The VPS also demonstrated that the live cycle refuses to trade when the environment gate is) Tj ET
+BT /F1 9.5 Tf 48 610 Td (disabled. After the gate was enabled for testing, the cycle still refused to force trades) Tj ET
+BT /F1 9.5 Tf 48 597 Td (because no fully protected, correlation-clear plan existed.) Tj ET
+BT /F1 9.5 Tf 48 584 Td (The latest candidate diagnostic showed a structural candidate marked confirmed but with) Tj ET
+BT /F1 9.5 Tf 48 571 Td (blank quantity, stop, target, and correlation fields. Its rejection evidence included weak) Tj ET
+BT /F1 9.5 Tf 48 558 Td (relative volume, missing funding/open-interest confirmation, unaligned order-book flow,) Tj ET
+BT /F1 9.5 Tf 48 545 Td (excessive proximity to opposing structure, failed retest/invalid close, blocked sizing, and) Tj ET
+BT /F1 9.5 Tf 48 532 Td (unavailable cross-market confirmation. This is a correct safety rejection, although the) Tj ET
+BT /F1 9.5 Tf 48 519 Td (status wording should be made clearer.) Tj ET
+BT /F1 9.5 Tf 48 506 Td (The earlier exchange response code 6002 was from an older uncertain trial and is not the) Tj ET
+BT /F1 9.5 Tf 48 493 Td (reason for the latest safe stop.) Tj ET
+0.10 0.28 0.45 RG 1 w 48 468 m 547 468 l S
+BT /F2 13 Tf 48 472 Td (4. Current validation and files) Tj ET
+0.91 0.95 0.98 rg 50 443 495 16 re f
+0 0 0 rg
+BT /F2 9.5 Tf 58 454 Td (CURRENT POSITION - Replit Crypto suite: 201 tests passed. The source tree is saved) Tj ET
+BT /F1 9.5 Tf 58 441 Td (under artifacts/agenticcore-markets/crypto. The VPS runtime copy is separate and) Tj ET
+BT /F1 9.5 Tf 58 429 Td (cannot be assumed synchronized without a file-manifest check.) Tj ET
+BT /F1 9.5 Tf 48 417 Td (Important source areas include adapters, analysis, config, domain models, risk, runtime,) Tj ET
+BT /F1 9.5 Tf 48 404 Td (storage, and tests. The main entry point supports local preflight, normal signal/paper) Tj ET
+BT /F1 9.5 Tf 48 391 Td (cycles, private account inspection, live preflight, guarded canary/cycle, reconciliation,) Tj ET
+BT /F1 9.5 Tf 48 378 Td (and monitoring.) Tj ET
+BT /F1 9.5 Tf 48 365 Td (Runtime files include state.json, paper_positions.json, pending setups, live-cycle records,) Tj ET
+BT /F1 9.5 Tf 48 352 Td (coin memory, and audit.jsonl. These are runtime evidence, not replacements for source code.) Tj ET
+0.10 0.28 0.45 RG 1 w 48 327 m 547 327 l S
+BT /F2 13 Tf 48 331 Td (5. What remains) Tj ET
+BT /F2 11 Tf 48 313 Td (Before continued live Crypto operation) Tj ET
+0.10 0.28 0.45 rg 51 299 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 298 Td (Keep the worker signal-first until a complete protected plan actually appears.) Tj ET
+0.10 0.28 0.45 rg 51 286 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 285 Td (Complete the independent Binance/Bybit confirmation work so unavailable cross-market) Tj ET
+BT /F1 9.5 Tf 76 272 Td (context does not block every candidate.) Tj ET
+0.10 0.28 0.45 rg 51 261 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 260 Td (Add a final per-candidate rejection/qualification field distinct from the preliminary) Tj ET
+BT /F1 9.5 Tf 76 247 Td (entry status. A value such as live_plan_qualified should be separate from structural) Tj ET
+BT /F1 9.5 Tf 76 235 Td (entry confirmed.) Tj ET
+0.10 0.28 0.45 rg 51 224 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 223 Td (Verify that the VPS package exactly matches the Replit release using a manifest and) Tj ET
+BT /F1 9.5 Tf 76 210 Td (hashes; do not overwrite the current runtime without reconciliation.) Tj ET
+0.10 0.28 0.45 rg 51 199 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 198 Td (Keep the dedicated trading key restricted to trading/view permissions, with) Tj ET
+BT /F1 9.5 Tf 76 185 Td (withdrawals disabled and IP restriction where available.) Tj ET
+0.10 0.28 0.45 rg 51 174 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 173 Td (Review one canary plan while watching MEXC, then use the five-position cycle only) Tj ET
+BT /F1 9.5 Tf 76 160 Td (after the canary path is accepted.) Tj ET
+BT /F2 11 Tf 48 140 Td (Strategy and learning work) Tj ET
+0.10 0.28 0.45 rg 51 126 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 125 Td (Keep every scanned coin on the radar and retain rejected opportunities with their) Tj ET
+BT /F1 9.5 Tf 76 112 Td (evidence.) Tj ET
+0.10 0.28 0.45 rg 51 101 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 100 Td (Expand persistent learning so each candidate/trade stores feature snapshots, regime,) Tj ET
+BT /F1 9.5 Tf 76 87 Td (session, volume, funding, open interest, microstructure, MFE/MAE, and exit reason.) Tj ET
+0.10 0.28 0.45 rg 51 76 4 4 re f
+0 0 0 rg
+BT /F1 9.5 Tf 62 75 Td (Validate candidate thresholds with replay and paper outcomes rather than relaxing) Tj ET
+0.65 0.65 0.65 RG 48 52 m 547 52 l S
+BT /F1 8 Tf 48 36 Td (AgenticCore project report  |  3/3) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 9 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+7 0 obj
+<< /Type /Page /Parent 9 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 4 0 R >>
+endobj
+8 0 obj
+<< /Type /Page /Parent 9 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+9 0 obj
+<< /Type /Pages /Kids [6 0 R 7 0 R 8 0 R] /Count 3 >>
+endobj
+10 0 obj
+<< /Type /Catalog /Pages 9 0 R >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000001688 00000 n 
+0000007591 00000 n 
+0000013765 00000 n 
+0000013901 00000 n 
+0000014037 00000 n 
+0000014173 00000 n 
+0000014242 00000 n 
+trailer
+<< /Size 11 /Root 10 0 R >>
+startxref
+14292
+%%EOF
