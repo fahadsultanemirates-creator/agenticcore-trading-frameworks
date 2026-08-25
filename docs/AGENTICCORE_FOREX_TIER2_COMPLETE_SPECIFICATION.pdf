@@ -1,0 +1,293 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 5104 >>
+stream
+BT /F1 16.0 Tf 1 0 0 1 48 792.0 Tm (AGENTICCORE FOREX PLUS - TIER 2) Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 770.0 Tm (CURRENT BUILD, OPERATION, AND COMPLETION CHECKLIST) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 748.0 Tm (Prepared: 20 August 2026) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 736.0 Tm () Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 722.0 Tm (PURPOSE) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 700.0 Tm (Tier 2 is the stable AgenticCore Forex Plus framework currently intended for the FBS) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 688.0 Tm (MT5 environment. It is a practical intraday multi-pair framework, not the future) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 676.0 Tm (Premium Tier 1 research system. Tier 2 should be frozen after its final safety checks.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 664.0 Tm () Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 650.0 Tm (STATUS LEGEND) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 628.0 Tm ([CURRENT] Implemented in the reviewed Tier 2 code/configuration.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 616.0 Tm ([PARTIAL] Present, but still needs a production-strength hardening or validation step.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 604.0 Tm ([NEXT] Missing or not yet fully verified and should be completed before calling Tier 2) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 592.0 Tm (       completely finished.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 580.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 566.0 Tm (1. OPERATING MODEL) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 550.0 Tm ([CURRENT] The Tier 2 process starts a trading manager, a portfolio monitor, and an) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 538.0 Tm (optional dedicated Telegram polling task.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 526.0 Tm ([CURRENT] The manager scans every 15 minutes.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 514.0 Tm ([CURRENT] The portfolio monitor refreshes account and positions every 15 seconds.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 502.0 Tm ([CURRENT] A scan runs market data, technical analysis, session intelligence, news) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 490.0 Tm (filtering, trade memory adjustments, signal generation, account/position refresh,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 478.0 Tm (entry guards, risk approval, and execution.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 466.0 Tm ([CURRENT] Open positions are monitored independently of the entry scan.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 454.0 Tm ([CURRENT] The framework supports auto, semi, and signal modes:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 442.0 Tm (  - auto: approved signals are executed automatically.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 430.0 Tm (  - semi: the best approved signal waits for Telegram /approve or /reject.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 418.0 Tm (  - signal: approved signals are reported but not executed.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 406.0 Tm ([CURRENT] A Replit guard prevents accidental live execution in the Replit editing) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 394.0 Tm (environment unless explicitly overridden. The live worker is intended for laptop/VPS.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 382.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 368.0 Tm (2. CURRENT BROKER AND SYMBOL SETUP) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 352.0 Tm ([CURRENT] The reviewed Tier 2 configuration is set for FBS with no symbol suffix.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 340.0 Tm ([CURRENT] The active configured instruments are:) Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 328.0 Tm (  EURUSD, GBPUSD, USDJPY, USDCHF, AUDUSD, USDCAD, EURGBP, EURJPY,) Tj ET
+BT /F1 16.0 Tf 1 0 0 1 48 306.0 Tm (  CADCHF, NZDAUD, XAUUSD, XAGUSD.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 284.0 Tm ([CURRENT] Broker suffix support exists. JustMarkets symbols can use the .m suffix.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 272.0 Tm ([CURRENT] Filling mode supports auto, FOK, IOC, and RETURN.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 260.0 Tm ([CURRENT] The framework uses the MT5 Python interface and a MockBridge in dev mode.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 248.0 Tm ([PARTIAL] The current MT5 bridge connects to an already-running terminal and does) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 236.0 Tm (not yet explicitly select an MT5 terminal path or verify every account identity) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 224.0 Tm (field before trading. This is acceptable for the current isolated FBS worker only) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 212.0 Tm (after the VPS checks are completed.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 200.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 186.0 Tm (3. MARKET DATA AND TECHNICAL ANALYSIS) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 170.0 Tm ([CURRENT] OHLCV data is requested for each configured symbol on M15, H1, and H4.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 158.0 Tm ([CURRENT] The default history request is 200 bars per timeframe.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 146.0 Tm ([CURRENT] Broker suffixes are applied centrally before symbols are passed to MT5.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 134.0 Tm ([CURRENT] Each timeframe calculates:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 122.0 Tm (  - RSI) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 110.0 Tm (  - MACD line, signal, and histogram) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 98.0 Tm (  - EMA20, EMA50, and EMA200) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 86.0 Tm (  - Bollinger upper, middle, and lower bands) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 74.0 Tm (  - ATR) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 5962 >>
+stream
+BT /F1 8.6 Tf 1 0 0 1 48 792.0 Tm (  - Recent support and resistance) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 780.0 Tm (  - UP, DOWN, or SIDEWAYS trend state) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 768.0 Tm (  - Six bullish and six bearish rule signals) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 756.0 Tm ([CURRENT] M15 is the primary snapshot. H1 and H4 are used for confluence.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 744.0 Tm ([CURRENT] Full agreement receives a +25 confidence bonus. Partial agreement receives) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 732.0 Tm (a +10 bonus. Confidence is capped at 95.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 720.0 Tm ([PARTIAL] There is no full stale-data, spread-quality, liquidity, anomaly, or) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 708.0 Tm (cross-provider data-quality gate yet. Those belong in the completion checklist and) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 696.0 Tm (Premium architecture.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 684.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 670.0 Tm (4. SESSION INTELLIGENCE) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 654.0 Tm ([CURRENT] UTC session intelligence detects Sydney, Tokyo, London, and New York.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 642.0 Tm ([CURRENT] London/New York overlap receives a +15 confidence modifier.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 630.0 Tm ([CURRENT] Tokyo/London overlap receives half of the overlap bonus.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 618.0 Tm ([CURRENT] An active single session has no modifier.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 606.0 Tm ([CURRENT] No active major session applies a -20 dead-zone modifier and reports AVOID.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 594.0 Tm ([CURRENT] Telegram /session reports active sessions, overlap, modifier, and recommendation.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 582.0 Tm ([PARTIAL] Session intelligence currently modifies confidence; it is not by itself the) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 570.0 Tm (hard Dubai entry gate. The separate TradingGuard is the hard new-entry gate.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 558.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 544.0 Tm (5. NEWS AND EVENT FILTER) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 528.0 Tm ([CURRENT] Tier 2 reads a ForexFactory calendar RSS/XML feed.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 516.0 Tm ([CURRENT] High-impact keyword matching covers items such as NFP, FOMC, Fed, CPI,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 504.0 Tm (GDP, rate decisions, employment, inflation, ECB, BOE, BOJ, and RBA.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 492.0 Tm ([CURRENT] Events within approximately 60 minutes of the current time can block) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 480.0 Tm (affected currency pairs.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 468.0 Tm ([CURRENT] Currency-to-pair mapping also covers gold, silver, and oil through USD.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 456.0 Tm ([PARTIAL] This is a lightweight keyword/feed filter, not a licensed economic-calendar) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 444.0 Tm (system. It can fail open when the feed is unavailable. Premium will replace it with) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 432.0 Tm (normalized, timestamped, provider-backed event data and explicit blackout/stabilization) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 420.0 Tm (  rules.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 408.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 394.0 Tm (6. SIGNAL GENERATION) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 378.0 Tm ([CURRENT] Base scoring compares six bullish and six bearish technical conditions.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 366.0 Tm ([CURRENT] A trend-aligned signal receives a base trend bonus.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 354.0 Tm ([CURRENT] Overbought/oversold conditions reduce confidence in the corresponding) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 342.0 Tm (direction when the setup is stretched.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 330.0 Tm ([CURRENT] MTF confluence, session modifier, and pair trade-memory adjustment are added.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 318.0 Tm ([CURRENT] Signals below the configured minimum confidence are converted to HOLD.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 306.0 Tm ([CURRENT] The reviewed Tier 2 configuration uses a 65% minimum confidence.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 294.0 Tm ([CURRENT] Gemini can validate borderline signals in the 40% to 70% range when the) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 282.0 Tm (Gemini key and feature flag are available.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 270.0 Tm ([CURRENT] If the LLM call fails, the code falls back to the rule-based direction and) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 258.0 Tm (confidence rather than stopping the whole scan.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 246.0 Tm ([PARTIAL] The LLM fallback is operationally resilient but is not yet calibrated) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 234.0 Tm (against realized outcomes. Confidence remains a heuristic score, not measured) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 222.0 Tm (probability.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 210.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 196.0 Tm (7. POSITION CAPACITY AND RISK) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 180.0 Tm ([CURRENT] Normal capacity is five simultaneous open positions.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 168.0 Tm ([CURRENT] Absolute capacity is seven simultaneous open positions.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 156.0 Tm ([CURRENT] Positions 6 and 7 require confidence strictly above 80%.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 144.0 Tm ([CURRENT] A pair with an existing open position is rejected by the capacity guard.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 132.0 Tm ([CURRENT] Capacity is reusable after a position closes; it is not a daily quota.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 120.0 Tm ([CURRENT] The default global fixed lot is 0.05. XAUUSD and XAGUSD have 0.01 overrides.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 108.0 Tm ([CURRENT] Risk-based sizing remains available when fixed lot is set to null.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 96.0 Tm ([CURRENT] Default stop-loss is 15 USD.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 84.0 Tm ([CURRENT] Default currency-pair take-profit is 20 USD.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 72.0 Tm ([CURRENT] XAUUSD and XAGUSD use 30 USD TP overrides.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 6238 >>
+stream
+BT /F1 8.6 Tf 1 0 0 1 48 792.0 Tm ([CURRENT] The configuration includes a 1% risk-per-trade setting, but fixed lot sizing) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 780.0 Tm (takes priority when a fixed lot is configured.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 768.0 Tm ([PARTIAL] Risk uses static pip-value tables and fixed lot rules; it does not yet) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 756.0 Tm (calculate broker contract specifications, total correlated exposure, margin stress,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 744.0 Tm (or portfolio risk from live symbol metadata.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 732.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 718.0 Tm (8. DUBAI SESSION AND DAILY LOCKS) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 702.0 Tm ([CURRENT] New entries are allowed from 05:00 through 23:29 Asia/Dubai.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 690.0 Tm ([CURRENT] New entries are blocked at or after 23:30.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 678.0 Tm ([CURRENT] Existing positions continue to be monitored and managed after the cutoff.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 666.0 Tm ([CURRENT] The session is 05:00 Dubai to the next 05:00 Dubai.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 654.0 Tm ([CURRENT] The baseline is persisted in trading_guard_state.json.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 642.0 Tm ([CURRENT] The current session equity P&L is compared to that baseline.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 630.0 Tm ([CURRENT] New entries lock at -15% session loss or +20% session profit.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 618.0 Tm ([CURRENT] If the current session baseline cannot be trusted, new entries remain blocked) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 606.0 Tm (until the next session boundary while existing positions remain managed.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 594.0 Tm ([PARTIAL] The current implementation should be verified after restart, VPS reboot,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 582.0 Tm (late launch, and boundary transitions before being marked final.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 570.0 Tm ([NEXT] Add explicit Telegram visibility for baseline, session key, lock state, and) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 558.0 Tm (reason so the operator can verify the guard without reading files.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 546.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 532.0 Tm (9. EXECUTION) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 516.0 Tm ([CURRENT] The execution agent fetches a live bid/ask immediately before order creation.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 504.0 Tm ([CURRENT] SL/TP are calculated from the live execution tick, not a stale candle close.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 492.0 Tm ([CURRENT] Buy orders use ask entry and sell orders use bid entry.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 480.0 Tm ([CURRENT] Filling modes can be tried according to configuration.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 468.0 Tm ([CURRENT] Every successful open can send Telegram details including direction, symbol,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 456.0 Tm (entry, lot, SL, TP, confidence, and summary.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 444.0 Tm ([CURRENT] Close actions send Telegram P&L messages and update trade memory.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 432.0 Tm ([CURRENT] closeall is available as an emergency Telegram command.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 420.0 Tm ([PARTIAL] The bridge currently falls back to MockBridge when MT5 connection fails.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 408.0 Tm (That is useful for development but is unsafe for a live worker if the fallback is not) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 396.0 Tm (explicitly visible and fail-closed. Live deployment should stop or alarm instead.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 384.0 Tm ([NEXT] Add explicit terminal path, account/server verification, unique worker identity,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 372.0 Tm (idempotent order handling, broker result reconciliation, and live-mode fail-closed behavior.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 360.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 346.0 Tm (10. PROFIT LOCK AND PORTFOLIO MONITOR) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 330.0 Tm ([CURRENT] The monitor refreshes positions every 15 seconds.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 318.0 Tm ([CURRENT] It reconciles positions missing from the local snapshot with broker history.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 306.0 Tm ([CURRENT] Broker-confirmed close P&L is recorded and reported.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 294.0 Tm ([CURRENT] At 65% progress from entry to the original TP, the stop locks 35% of that) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 282.0 Tm (original TP distance.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 270.0 Tm ([CURRENT] The original TP remains unchanged.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 258.0 Tm ([CURRENT] The lock is applied only in the favorable direction and once per ticket.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 246.0 Tm ([CURRENT] The live executable price side is used: bid for BUY and ask for SELL.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 234.0 Tm ([CURRENT] A combined floating basket target of 30 USD can close all active positions.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 222.0 Tm ([CURRENT] Daily, floating, basket, and total exposure summaries are available.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 210.0 Tm ([PARTIAL] Tier 2 currently has one principal profit-lock behavior. It does not yet) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 198.0 Tm (have Premium's multi-level exceptional-trend, exhaustion, or thesis-invalidation) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 186.0 Tm (management.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 174.0 Tm ([NEXT] Verify that the basket close policy is intentional for the live FBS account,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 162.0 Tm (because it can close otherwise healthy individual trades.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 150.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 136.0 Tm (11. TRADE MEMORY AND REPORTING) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 120.0 Tm ([CURRENT] Recent per-pair outcomes are persisted in logs/trade_memory.json.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 108.0 Tm ([CURRENT] After at least five trades, the last 20 results can create:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 96.0 Tm (  - +10 confidence adjustment at or above 60% win rate.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 84.0 Tm (  - -15 confidence adjustment at or below 35% win rate.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 72.0 Tm ([CURRENT] JSONL trade logs record trade time, pair, direction, lot, ticket, price,) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 5791 >>
+stream
+BT /F1 8.6 Tf 1 0 0 1 48 792.0 Tm (SL, TP, profit, status, and signal summary.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 780.0 Tm ([CURRENT] Telegram supports today, week, and all-time reports.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 768.0 Tm ([CURRENT] Daily reports are scheduled for 23:45 Dubai time.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 756.0 Tm ([CURRENT] Weekly reports are sent on Monday after the reporting time.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 744.0 Tm ([CURRENT] Telegram supports /memory, /report, /backtest, and /optimize.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 732.0 Tm ([PARTIAL] Memory stores results and adjusts confidence, but it does not yet store) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 720.0 Tm (the full feature snapshot, regime, event state, MFE/MAE, rejection reason, or exit) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 708.0 Tm (classification needed for research-grade learning.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 696.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 682.0 Tm (12. TELEGRAM CONTROL SURFACE) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 666.0 Tm ([CURRENT] Admin authorization is checked against the configured admin chat ID.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 654.0 Tm ([CURRENT] Main commands include:) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 642.0 Tm (  /status, /report, /session, /memory, /broker) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 630.0 Tm (  /stop, /resume, /closeall) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 618.0 Tm (  /mode auto|semi|signal) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 606.0 Tm (  /reload) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 594.0 Tm (  /settp, /setsl, /setrisk, /setconfidence, /pairs) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 582.0 Tm (  /maxpositions, /backtest, /optimize) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 570.0 Tm (  /approve, /reject) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 558.0 Tm ([CURRENT] Telegram polling has conflict retry handling and drops stale webhooks.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 546.0 Tm ([CURRENT] Tier 2 uses a dedicated Telegram token/environment variable separate from) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 534.0 Tm (the old Tier 1 bot.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 522.0 Tm ([PARTIAL] Configuration changes are not yet a complete audited configuration) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 510.0 Tm (management system. Sensitive, high-impact changes should gain confirmation, bounds,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 498.0 Tm (audit logging, and persistent operator visibility.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 486.0 Tm ([NEXT] Add heartbeat, MT5 disconnect, stale-data, failed-order, session-lock, and) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 474.0 Tm (unexpected-process-stop alerts.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 462.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 448.0 Tm (13. CURRENT TIER 2 COMPLETION CHECKLIST) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 432.0 Tm ([ ] Verify VPS account, server, and broker identity from Telegram and logs.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 420.0 Tm ([ ] Verify MT5 AutoTrading and terminal state.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 408.0 Tm ([ ] Replace any credential values in configuration files with VPS environment secrets.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 396.0 Tm ([ ] Rotate credentials if any were ever exposed outside the secret manager.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 384.0 Tm ([ ] Confirm no live fallback to MockBridge after an MT5 failure.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 372.0 Tm ([ ] Confirm the 05:00 baseline is captured and survives restart.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 360.0 Tm ([ ] Confirm late launch blocks entries until the next 05:00 reset.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 348.0 Tm ([ ] Confirm 23:30 blocks only new entries.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 336.0 Tm ([ ] Test -15% and +20% locks with simulated state.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 324.0 Tm ([ ] Test position slots 1-5, then confidence strictly above 80% for slots 6-7.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 312.0 Tm ([ ] Test capacity reuse after a position closes.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 300.0 Tm ([ ] Test live tick SL/TP calculation on a symbol with the broker's real contract.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 288.0 Tm ([ ] Test profit lock at exactly 65%, including BUY and SELL.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 276.0 Tm ([ ] Verify original TP remains unchanged after the lock.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 264.0 Tm ([ ] Decide and document whether the 30 USD basket close remains enabled.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 252.0 Tm ([ ] Confirm Telegram /status, /session, /report, /memory, /stop, /resume, /closeall.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 240.0 Tm ([ ] Confirm one and only one polling process for this bot.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 228.0 Tm ([ ] Confirm daily and weekly reports.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 216.0 Tm ([ ] Back up logs and state before the next operating session.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 204.0 Tm ([ ] Freeze Tier 2 after these checks; future improvements belong in Premium unless) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 192.0 Tm (they are critical safety fixes.) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 180.0 Tm () Tj ET
+BT /F1 10.5 Tf 1 0 0 1 48 166.0 Tm (14. TIER 2 BOUNDARY) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 150.0 Tm (Tier 2 is a stable, rules-based plus limited-LLM intraday framework. It offers) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 138.0 Tm (multi-timeframe technical confluence, session intelligence, event blocking, trade) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 126.0 Tm (memory, fixed/risk-based sizing, position capacity, Telegram control, MT5 execution,) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 114.0 Tm (profit locking, basket protection, and reporting. It does not yet offer Premium's) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 102.0 Tm (research-grade provider adapters, calibrated probability, correlation portfolio) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 90.0 Tm (model, specialist gold/silver/oil modules, structured trade memory, or full) Tj ET
+BT /F1 8.6 Tf 1 0 0 1 48 78.0 Tm (out-of-sample validation system.) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000140 00000 n 
+0000000210 00000 n 
+0000005366 00000 n 
+0000005492 00000 n 
+0000011506 00000 n 
+0000011632 00000 n 
+0000017922 00000 n 
+0000018048 00000 n 
+0000023892 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+24020
+%%EOF
